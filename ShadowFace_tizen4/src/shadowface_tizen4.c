@@ -52,7 +52,7 @@ short borderCommonDistance;
 int charsizeX = 27, charsizeY = 20, borderDistance = 26, tickBorderDistance = 2;
 bool showingMinutes[12];
 char ticktextbuf[30];
-uint8_t shownElementsPerSide = 6;
+uint8_t shownElementsPerSide = 6; // 6 is the minimum value for visibility of both current/next digit
 
 
 short shadowCoeff;
