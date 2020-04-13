@@ -47,13 +47,12 @@ short GeneralGap;
 short hourCenterDistance, secondCenterDistance, hand_hour_length,
     hand_minute_length, hand_second_length;
 short borderCommonDistance;
+
 /* Ticks */
 int charsizeX = 27, charsizeY = 20, borderDistance = 26, tickBorderDistance = 2;
-
 bool showingMinutes[12];
-
 char ticktextbuf[30];
-uint8_t shownElementsPerSide = 5;
+uint8_t shownElementsPerSide = 6;
 
 
 short shadowCoeff;
@@ -1037,7 +1036,7 @@ app_time_tick (watch_time_h watch_time, void *data)
   player_stop (ad->playerTick1);
   player_stop (ad->playerTick2);
 
-  requestUpdate(false, watch_time, ad);
+  requestUpdate(true, watch_time, ad);
   //active_tick (ad, watch_time);
 
 }
@@ -1047,7 +1046,7 @@ app_ambient_tick (watch_time_h watch_time, void *data)
 {
   /* Called at each minute while the device is in ambient mode. Update watch UI. */
   appdata_s *ad = data;
-  requestUpdate(true, watch_time, ad);
+  requestUpdate(false, watch_time, ad);
   //ambient_tick (ad, watch_time);
 
 }
