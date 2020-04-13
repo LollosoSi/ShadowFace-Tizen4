@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<manifest xmlns="http://tizen.org/ns/packages" api-version="4.0" package="ciabbale.shadowface" version="1.0.0">
+    <profile name="wearable"/>
+    <watch-application ambient-support="true" appid="ciabbale.shadowface" exec="shadowface_tizen4">
+        <label>Shadow Face</label>
+        <icon>preview_analog.png</icon>
+    </watch-application>
+    <privileges>
+        <privilege>http://tizen.org/privilege/alarm.set</privilege>
+    </privileges>
+</manifest>
