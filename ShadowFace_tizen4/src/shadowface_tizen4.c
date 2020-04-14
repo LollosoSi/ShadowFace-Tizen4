@@ -952,8 +952,8 @@ app_create (int width, int height, void *data)
     dlog_print (DLOG_ERROR, LOG_TAG,
 		"failed to prepare player: error code = %d", error_code);
 
-  player_set_volume (ad->playerTick1, 0.3f, 0.3f);
-  player_set_volume (ad->playerTick2, 0.3f, 0.3f);
+  player_set_volume (ad->playerTick1, 0.1f, 0.1f);
+  player_set_volume (ad->playerTick2, 0.1f, 0.1f);
 
 
   shadowCoeff = 255.0f / shownElementsPerSide;
