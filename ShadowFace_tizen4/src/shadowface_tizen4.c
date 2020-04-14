@@ -49,8 +49,22 @@ short hourCenterDistance, secondCenterDistance, hand_hour_length,
 short borderCommonDistance;
 
 // Pick one
-String tick1 = "tick1.ogg", tick2 = "tick2.ogg"; float tickVolume = 0.3f;
-//String tick1 = "tick1set2.ogg", tick2 = "tick2set2.ogg"; float tickVolume = 0.15f;
+#define pack1
+//#define pack2
+
+#ifdef pack1
+const char** tick1 = "tick1.ogg";
+const char** tick2 = "tick2.ogg";
+const float tickVolume = 0.3;
+#endif
+
+#ifdef pack2
+const char** tick1 = "tick1set2.ogg";
+const char** tick2 = "tick2set2.ogg";
+const float tickVolume = 0.15;
+#endif
+
+bool enable_antialiasing = true;
 
 /* Ticks */
 int charsizeX = 27, charsizeY = 20, borderDistance = 26, tickBorderDistance = 2;
