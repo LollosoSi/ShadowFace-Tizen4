@@ -48,6 +48,10 @@ short hourCenterDistance, secondCenterDistance, hand_hour_length,
     hand_minute_length, hand_second_length;
 short borderCommonDistance;
 
+// Pick one
+String tick1 = "tick1.ogg", tick2 = "tick2.ogg";
+//String tick1 = "tick1set2.ogg", tick2 = "tick2set2.ogg";
+
 /* Ticks */
 int charsizeX = 27, charsizeY = 20, borderDistance = 26, tickBorderDistance = 2;
 bool showingMinutes[12];
@@ -916,7 +920,7 @@ app_create (int width, int height, void *data)
 
   char *sound_path = NULL;
 
-  app_resource_manager_get (APP_RESOURCE_TYPE_SOUND, "tick1.ogg", &sound_path);
+  app_resource_manager_get (APP_RESOURCE_TYPE_SOUND, tick1, &sound_path);
   dlog_print (DLOG_ERROR, LOG_TAG, "SOUND PATH %s", sound_path);
 
   error_code = player_set_uri (ad->playerTick1, sound_path);
@@ -939,7 +943,7 @@ app_create (int width, int height, void *data)
     dlog_print (DLOG_ERROR, LOG_TAG, "failed to create");
 
   *sound_path = NULL;
-  app_resource_manager_get (APP_RESOURCE_TYPE_SOUND, "tick2.ogg", &sound_path);
+  app_resource_manager_get (APP_RESOURCE_TYPE_SOUND, tick2, &sound_path);
   // dlog_print(DLOG_ERROR, LOG_TAG, "SOUND PATH %s", sound_path);
 
   error_code = player_set_uri (ad->playerTick2, sound_path);
