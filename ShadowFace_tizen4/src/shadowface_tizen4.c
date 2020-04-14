@@ -49,8 +49,8 @@ short hourCenterDistance, secondCenterDistance, hand_hour_length,
 short borderCommonDistance;
 
 // Pick one
-String tick1 = "tick1.ogg", tick2 = "tick2.ogg";
-//String tick1 = "tick1set2.ogg", tick2 = "tick2set2.ogg";
+String tick1 = "tick1.ogg", tick2 = "tick2.ogg"; float tickVolume = 0.3f;
+//String tick1 = "tick1set2.ogg", tick2 = "tick2set2.ogg"; float tickVolume = 0.15f;
 
 /* Ticks */
 int charsizeX = 27, charsizeY = 20, borderDistance = 26, tickBorderDistance = 2;
@@ -956,8 +956,8 @@ app_create (int width, int height, void *data)
     dlog_print (DLOG_ERROR, LOG_TAG,
 		"failed to prepare player: error code = %d", error_code);
 
-  player_set_volume (ad->playerTick1, 0.1f, 0.1f);
-  player_set_volume (ad->playerTick2, 0.1f, 0.1f);
+  player_set_volume (ad->playerTick1, tickVolume, tickVolume);
+  player_set_volume (ad->playerTick2, tickVolume, tickVolume);
 
 
   shadowCoeff = 255.0f / shownElementsPerSide;
